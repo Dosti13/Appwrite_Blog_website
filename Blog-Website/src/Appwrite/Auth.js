@@ -37,21 +37,20 @@ export class AuthService  {
         }
         async getCurrentUser(){
             try {
-                const user = this.account.get()
-                if (user){
-                    return user 
+                // Attempt to get the current user, only if there's an active session
+                const user = await this.account.get();
+                return user; // Return the user if found
+              } catch (error) {
+                if (error.code === 401) {
+                  console.warn("No active session found. User must log in.");
+                  return null; // Return null if no user is found
                 }
-                else {
-                    console.log("you have to log first");
-                    
-                }
-            } catch (error) {
-                console.log(error,"error in get user");
-                 
-            };
-            return null
+                console.error("Error in get user:", error);
+                throw error;
+              }
+            }
 
-        }
+        
     async logout(){
         try {
             await this.account.deleteSessions()
