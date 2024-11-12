@@ -4,7 +4,7 @@ import { login as authLogin } from "../Store/authSlice";
 import {Input , Container ,Button,Logo} from './index'
 import React, { useState } from 'react'
 import { useForm } from "react-hook-form";
-import authService from "../appwrite/auth";
+import authService from "../Appwrite/Auth";
 
 
 

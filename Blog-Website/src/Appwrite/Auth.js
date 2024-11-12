@@ -37,7 +37,14 @@ export class AuthService  {
         }
         async getCurrentUser(){
             try {
-                return await this.account.get()
+                const user = this.account.get()
+                if (user){
+                    return user 
+                }
+                else {
+                    console.log("you have to log first");
+                    
+                }
             } catch (error) {
                 console.log(error,"error in get user");
                  

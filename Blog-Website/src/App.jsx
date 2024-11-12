@@ -4,8 +4,7 @@ import './App.css'
 import {login, logout} from "./Store/authSlice"
 import { Container, Footer, Header } from './component'
 import { Outlet } from 'react-router-dom'
-import authService from './appwrite/auth'
-
+import authService from './Appwrite/Auth'
 function App() {
   const [loading, setLoading] = useState(true)
   const dispatch = useDispatch()
