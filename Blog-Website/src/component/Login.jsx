@@ -19,7 +19,7 @@ export default function Login() {
         try {
             const Session = await  authService.login(data)
             if (Session){
-                const UserData = await authService.getCurrentUser
+                const UserData = await authService.getCurrentUser()
                 if (UserData){
                     dispatch(authLogin(UserData))
                     Navigate("/")
@@ -73,7 +73,7 @@ export default function Login() {
                 />
                 <Button
                 type="submit"
-                className={`w-full`}
+                className={`w-full bg-slate-900  text-white mt-4 p-2 hover:bg-slate-800`}
                 >Sign in</Button>
                 
 
