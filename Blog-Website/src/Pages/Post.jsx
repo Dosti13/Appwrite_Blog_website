@@ -39,13 +39,12 @@ export default function Post() {
     
             <Container>
     <div className="py-8">
-    {console.log("post data",post)}
-                <div className="w-full flex justify-center mb-4 relative border rounded-xl p-2 flex-col">
+                <div className="w-full flex justify-center  items-center mb-4 relative  border-2 border-black rounded-xl p-2 flex-col">
                     
                     <img
                         src={service.getFilePreview(post.featuredimage)}
                         alt={post.title}
-                        className="rounded-xl w-80 h-80 items-center justify-center"
+                        className="w-2/4 h-screen"
                     />
 
                 </div>

@@ -14,7 +14,6 @@ function Signup() {
     const {register, handleSubmit} = useForm()
 
     const create = async(data) => {
-        console.log(data);
         
         setError("")
         try {
@@ -22,7 +21,6 @@ function Signup() {
         
               
             if (userData) {
-                console.log(userData);
                 const userData = await service.getCurrentUser()
                 if(userData) dispatch(login(userData));
                 navigate("/")

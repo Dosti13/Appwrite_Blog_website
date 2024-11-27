@@ -16,13 +16,13 @@ export default function Allpost() {
   return (
     <div className='w-full py-8'>
     <Container>
-        <div className='flex flex-wrap'>
+        <div className='flex flex-wrap  '>
           
           
             
             {Posts.map((post) => (
                 
-                <div key={post.$id} className='p-2 w-1/4'>
+                <div key={post.$id} className='p-2  w-2/4 lg:w-1/4 flex items-center '>
                     <PostCard {...post} />
                 </div>
 

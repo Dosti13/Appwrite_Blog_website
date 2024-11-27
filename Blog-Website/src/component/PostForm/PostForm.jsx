@@ -18,12 +18,9 @@ export default function PostForm({ post }) {
 
     const navigate = useNavigate();
     const userData = useSelector((state) => state.auth.userData);
-            console.log(userData  , "uSerdata");
             
     const submit = async (data) => {
-        console.log(data);
-        console.log(data.image);
-        
+      
         
         if (post) {
 
@@ -122,8 +119,8 @@ export default function PostForm({ post }) {
                     className="mb-4"
                     {...register("status", { required: true })}
                 />
-                <Button type="submit" className={post ? "bg-green-500" : undefined} >
-                    {post ? "Update" : "Submit"}
+                <Button type="submit" className={post ? "bg-green-500" : "bg-slate-800"} >
+                    {post ? "Update" : "Submit" }
                 </Button>
             </div>
         </form>

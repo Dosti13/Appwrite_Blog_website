@@ -12,11 +12,9 @@ const [BackgroundImage,setBackgroundImage] = useState("")
   return (
     <Link to={`/post/${$id}`}>
         <div className='w-full bg-gray-100 rounded-xl p-4'>
-            <div className='w-full justify-center mb-4'>
-              {console.log(BackgroundImage)}
+            <div className='w-full justify-center   mb-4'>
               
                 <img src={BackgroundImage} alt={title}
-             //           https://cloud.appwrite.io/v1/storage/buckets/66e33f1d00261c8f8171/files/6723c4ba00127e8ff3ad/view?project=66e33b0c002d2fea8962&project=66e33b0c002d2fea8962&mode=admin
                 className='rounded-xl' />
 
             </div>
